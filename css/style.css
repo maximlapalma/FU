@@ -1,0 +1,702 @@
+@charset "UTF-8";
+body {
+  margin: 0;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0%;
+  font-size: calc(0.5em + 1vh); }
+
+fieldset {
+  padding: 0.5em;
+  margin: 0%; }
+
+input {
+  padding: 0%;
+  margin: 0; }
+
+select {
+  appearance: none; }
+
+/*TEXTO PEQUEÑO Y EN VERTICAL*/
+.vertical-text {
+  writing-mode: vertical-lr;
+  transform: rotate(180deg);
+  font-size: 0.6em; }
+
+/*LABEL*/
+label {
+  font-size: x-small; }
+
+select {
+  width: 95%; }
+
+/*LABEL MÁS INPUT*/
+.label-mas-input {
+  display: grid;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  justify-items: stretch;
+  grid-template-columns: 25% 75%;
+  grid-template-rows: 0fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas: "text-label input"; }
+
+.text-label {
+  grid-area: text-label; }
+  .text-label label {
+    font-size: x-small;
+    line-height: 0.5em; }
+
+.input {
+  grid-area: input; }
+  .input input {
+    width: 95%; }
+
+/*
+<div class="label-mas-input">
+  <div class="text-label"></div>
+  <div class="input"></div>
+</div>
+*/
+/*ESTRUCTURA*/
+.estructura-general {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 0fr 0fr;
+  gap: 0px 0px;
+  grid-template-areas: "parte-1" "parte-2";
+  justify-content: center;
+  align-items: center;
+  justify-items: center;
+  padding: 1rem; }
+
+.parte-1 {
+  grid-area: parte-1;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 1fr;
+  gap: 3px;
+  grid-auto-flow: row;
+  grid-template-areas: "columna-1 columna-2"; }
+
+.parte-2 {
+  grid-area: parte-2;
+  display: grid;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  justify-items: center;
+  grid-template-columns: 98%;
+  grid-template-rows: 0fr 0fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas: "establecimiento-1" "establecimiento-2";
+  border: solid 1px black;
+  padding: 0.5rem;
+  /*esto sigue en la PARTE 2*/ }
+
+/*PARTE 1*/
+.columna-1 {
+  grid-area: columna-1; }
+
+.columna-2 {
+  grid-area: columna-2; }
+
+/*RUBRO 1*/
+.rubro-1 {
+  display: grid;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  justify-items: stretch;
+  grid-template-columns: 1fr;
+  grid-template-rows: 0fr 0fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas: "tramite" "numero-tramite"; }
+
+.tramite {
+  grid-area: tramite;
+  width: 100%; }
+
+.numero-tramite {
+  grid-area: numero-tramite;
+  width: 100%; }
+
+.numero-tramite {
+  display: grid;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  justify-items: stretch;
+  grid-template-columns: 25% 10% 10% 20% 20% 15%;
+  /*grid-template-rows: 1fr;*/
+  grid-auto-flow: row;
+  grid-template-areas: "numero-tramite-label tipo dpto cue numero anio"; }
+  .numero-tramite input {
+    width: 90%; }
+
+.numero-tramite-label {
+  grid-area: numero-tramite-label; }
+
+.tipo {
+  grid-area: tipo;
+  text-align: center; }
+  .tipo label {
+    display: block; }
+
+.dpto {
+  grid-area: dpto;
+  text-align: center; }
+  .dpto label {
+    display: block; }
+
+.cue {
+  grid-area: cue;
+  text-align: center; }
+  .cue label {
+    display: block; }
+
+.numero {
+  grid-area: numero;
+  text-align: center; }
+  .numero label {
+    display: block; }
+
+.anio {
+  grid-area: anio;
+  text-align: center; }
+  .anio label {
+    display: block; }
+
+/*DATOS DEL SOLICITANTE*/
+.datos-solicitante {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 0fr 0fr 0fr 0fr 0fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas: "apellido" "nombres" "numero-documento" "tipo-doc" "sexo"; }
+
+.apellido {
+  grid-area: apellido; }
+
+.nombres {
+  grid-area: nombres; }
+
+.numero-documento {
+  grid-area: numero-documento; }
+
+.tipo-doc {
+  grid-area: tipo-doc;
+  display: grid;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  justify-items: start;
+  grid-template-columns: 25% 25% 25% 25%;
+  grid-template-rows: 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas: "tipo-doc-label dni le lc"; }
+
+.tipo-doc-label {
+  grid-area: tipo-doc-label; }
+
+.dni {
+  grid-area: dni; }
+
+.le {
+  grid-area: le; }
+
+.lc {
+  grid-area: lc; }
+
+.sexo {
+  grid-area: sexo;
+  display: grid;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  justify-items: start;
+  grid-template-columns: 33% 33% 33%;
+  grid-template-rows: 0fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas: "label-sexo masculino femenino"; }
+
+.label-sexo {
+  grid-area: label-sexo; }
+
+.masculino {
+  grid-area: masculino; }
+
+.femenino {
+  grid-area: femenino; }
+
+/*DATOS ESTABLECIMIENTO*/
+.datos-establecimiento {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 0fr 0fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas: "nombre-escuela" "cue-escuela"; }
+
+.nombre-escuela {
+  grid-area: nombre-escuela; }
+
+.cue-escuela {
+  grid-area: cue-escuela; }
+
+/*DATOS DE TRÁMITE*/
+.datos-tramite {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 0fr 0fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas: "fecha-inicio" "fecha-finalizacion"; }
+
+.fecha-inicio {
+  grid-area: fecha-inicio; }
+
+.fecha-finalizacion {
+  grid-area: fecha-finalizacion; }
+
+/*DESIGNACIONES*/
+.designaciones {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 0fr 0fr 0fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas: "fecha-toma-posesion" "agt-reemplazado" "numero-documento-reemplazado"; }
+
+.fecha-toma-posesion {
+  grid-area: fecha-toma-posesion; }
+
+.agt-reemplazado {
+  grid-area: agt-reemplazado; }
+
+.numero-documento-reemplazado {
+  grid-area: numero-documento-reemplazado; }
+
+/*LICENCIAS*/
+.licencias {
+  display: grid;
+  align-items: center;
+  align-content: start;
+  justify-content: center;
+  justify-items: start;
+  grid-template-columns: 1fr;
+  grid-template-rows: 0fr 0fr 0fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas: "remunerada" "cantidad-dias" "norma-legal"; }
+  .licencias #porcentaje,
+  .licencias #cant-dias,
+  .licencias #obligaciones,
+  .licencias #si-o-no {
+    width: 3rem; }
+  .licencias #norma-legal {
+    width: 5rem; }
+  .licencias #articulo,
+  .licencias #inciso {
+    width: 2rem; }
+
+.remunerada {
+  grid-area: remunerada;
+  display: grid;
+  /*grid-template-columns: 1fr 1fr;*/
+  grid-template-rows: 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas: "si-no porcentaje"; }
+
+.si-no {
+  grid-area: si-no;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-content: center;
+  justify-content: center;
+  align-items: center; }
+
+.porcentaje {
+  grid-area: porcentaje;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-content: center;
+  justify-content: center;
+  align-items: center; }
+
+.cantidad-dias {
+  grid-area: cantidad-dias;
+  display: grid;
+  /*grid-template-columns: 0fr 0fr;*/
+  grid-template-rows: 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas: "dias-solicitados obligaciones"; }
+
+.dias-solicitados {
+  grid-area: dias-solicitados;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-content: center;
+  justify-content: start;
+  align-items: center; }
+  .dias-solicitados label {
+    width: 60%; }
+
+.obligaciones {
+  grid-area: obligaciones;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-content: center;
+  justify-content: center;
+  align-items: center; }
+
+.norma-legal {
+  grid-area: norma-legal;
+  display: grid;
+  /*grid-template-columns: 0fr 0fr 0fr;*/
+  grid-template-rows: 0fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas: "norma articulo inciso"; }
+
+.norma {
+  grid-area: norma;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+  align-items: center; }
+
+.articulo {
+  grid-area: articulo;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+  align-items: center; }
+
+.inciso {
+  grid-area: inciso;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+  align-items: center; }
+
+/*TRASLADOS*/
+.traslados {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas: "causa" "destino"; }
+
+.causa {
+  grid-area: causa; }
+
+.destino {
+  grid-area: destino; }
+
+/*PERMUTAS*/
+.permutas {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 0fr 0fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas: "agt-permutante" "documento-permutante"; }
+
+.agt-permutante {
+  grid-area: agt-permutante; }
+
+.documento-permutante {
+  grid-area: documento-permutante; }
+
+/*PARTE DOS DEL FORMULARIO!!!!*/
+.establecimiento-1 {
+  grid-area: establecimiento-1;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 0fr 0fr 0fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas: "datos-establecimiento-1" "labels-establecimiento-1" "carga-datos-1"; }
+
+.datos-establecimiento-1 {
+  grid-area: datos-establecimiento-1;
+  display: grid;
+  align-items: center;
+  align-content: space-evenly;
+  justify-content: center;
+  justify-items: stretch;
+  grid-template-columns: 20% 40% 20% 20%;
+  grid-template-rows: 1fr 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas: "label-datos nombre-establecimiento-1 cue-establecimiento-1 nivel-establecimiento-1" "label-datos input-nombre-establecimiento-1 input-cue-establecimiento-1 input-establecimiento-1"; }
+
+.label-datos {
+  grid-area: label-datos; }
+
+.cue-establecimiento-1 {
+  grid-area: cue-establecimiento-1; }
+
+.input-cue-establecimiento-1 {
+  grid-area: input-cue-establecimiento-1; }
+  .input-cue-establecimiento-1 input {
+    width: 90%; }
+
+.nombre-establecimiento-1 {
+  grid-area: nombre-establecimiento-1; }
+
+.input-nombre-establecimiento-1 {
+  grid-area: input-nombre-establecimiento-1; }
+  .input-nombre-establecimiento-1 input {
+    width: 95%; }
+
+.nivel-establecimiento-1 {
+  grid-area: nivel-establecimiento-1; }
+
+.input-establecimiento-1 {
+  grid-area: input-establecimiento-1; }
+  .input-establecimiento-1 input {
+    width: 90%; }
+
+.labels-establecimiento-1 {
+  grid-area: labels-establecimiento-1;
+  display: grid;
+  align-items: baseline;
+  align-content: center;
+  justify-content: center;
+  justify-items: center;
+  grid-template-columns: 45% 5% 5% 5% 5% 5% 15% 5% 5% 5%;
+  grid-template-rows: 0fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas: "cargo-nombre-1 turno-1 anio-1 seccion-1 cant-horas-1 sit-revista-1 antiguedad-1 frente-1 dia-1 horario-1"; }
+  .labels-establecimiento-1 p {
+    margin: 0rem 1rem 0rem 1rem; }
+
+.cargo-nombre-1 {
+  grid-area: cargo-nombre-1; }
+
+.turno-1 {
+  grid-area: turno-1; }
+
+.anio-1 {
+  grid-area: anio-1; }
+
+.seccion-1 {
+  grid-area: seccion-1; }
+
+.cant-horas-1 {
+  grid-area: cant-horas-1; }
+
+.sit-revista-1 {
+  grid-area: sit-revista-1; }
+
+.antiguedad-1 {
+  grid-area: antiguedad-1; }
+
+.frente-1 {
+  grid-area: frente-1; }
+
+.dia-1 {
+  grid-area: dia-1; }
+
+.horario-1 {
+  grid-area: horario-1; }
+
+/*FILAS*/
+.fila-carga-datos {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas: "fila-1" "fila-2" "fila-3" "fila-4" "fila-5" "fila-6" "fila-7"; }
+
+.fila-1 {
+  grid-area: fila-1; }
+
+.fila-2 {
+  grid-area: fila-2; }
+
+.fila-3 {
+  grid-area: fila-3; }
+
+.fila-4 {
+  grid-area: fila-4; }
+
+.fila-5 {
+  grid-area: fila-5; }
+
+.fila-6 {
+  grid-area: fila-6; }
+
+.fila-7 {
+  grid-area: fila-7; }
+
+/*CARGA DE DATOS*/
+.carga-datos-1 {
+  grid-area: carga-datos-1;
+  display: grid;
+  grid-template-columns: 45% 5% 5% 5% 5% 5% 15% 5% 5% 5%;
+  grid-template-rows: 0fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas: "input-1 input-2 input-3 input-4 input-5 input-6 input-7 input-8 input-9 input-10"; }
+
+.input-1 {
+  grid-area: input-1; }
+  .input-1 input {
+    width: 95%; }
+
+.input-2 {
+  grid-area: input-2; }
+
+.input-3 {
+  grid-area: input-3; }
+  .input-3 input {
+    width: 95%; }
+
+.input-4 {
+  grid-area: input-4; }
+  .input-4 input {
+    width: 95%; }
+
+.input-5 {
+  grid-area: input-5; }
+  .input-5 input {
+    width: 95%; }
+
+.input-6 {
+  grid-area: input-6; }
+  .input-6 input {
+    width: 95%; }
+
+.input-7 {
+  grid-area: input-7; }
+  .input-7 input {
+    width: 95%; }
+
+.input-8 {
+  grid-area: input-8; }
+
+.input-9 {
+  grid-area: input-9; }
+
+.input-10 {
+  grid-area: input-10; }
+  .input-10 input {
+    width: 95%; }
+
+.establecimiento-2 {
+  grid-area: establecimiento-2;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 0fr 0fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas: "datos-establecimiento-2" "carga-datos-1"; }
+
+.datos-establecimiento-2 {
+  grid-area: datos-establecimiento-2;
+  display: grid;
+  align-items: center;
+  align-content: space-evenly;
+  justify-content: center;
+  justify-items: stretch;
+  grid-template-columns: 20% 40% 20% 20%;
+  grid-template-rows: 1fr 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas: "label-datos nombre-establecimiento-2 cue-establecimiento-2 nivel-establecimiento-2" "label-datos input-nombre-establecimiento-2 input-cue-establecimiento-2 input-establecimiento-2"; }
+
+.label-datos {
+  grid-area: label-datos; }
+
+.cue-establecimiento-2 {
+  grid-area: cue-establecimiento-2; }
+
+.input-cue-establecimiento-2 {
+  grid-area: input-cue-establecimiento-2; }
+  .input-cue-establecimiento-2 input {
+    width: 90%; }
+
+.nombre-establecimiento-2 {
+  grid-area: nombre-establecimiento-2; }
+
+.input-nombre-establecimiento-2 {
+  grid-area: input-nombre-establecimiento-2; }
+  .input-nombre-establecimiento-2 input {
+    width: 95%; }
+
+.nivel-establecimiento-2 {
+  grid-area: nivel-establecimiento-2; }
+
+.input-establecimiento-2 {
+  grid-area: input-establecimiento-2; }
+  .input-establecimiento-2 input {
+    width: 90%; }
+
+/*TEXTO PEQUEÑO Y EN VERTICAL*/
+.vertical-text {
+  writing-mode: vertical-lr;
+  transform: rotate(180deg);
+  font-size: 0.6em; }
+
+/*LABEL*/
+label {
+  font-size: x-small; }
+
+select {
+  width: 95%; }
+
+/*LABEL MÁS INPUT*/
+.label-mas-input {
+  display: grid;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  justify-items: stretch;
+  grid-template-columns: 25% 75%;
+  grid-template-rows: 0fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas: "text-label input"; }
+
+.text-label {
+  grid-area: text-label; }
+  .text-label label {
+    font-size: x-small;
+    line-height: 0.5em; }
+
+.input {
+  grid-area: input; }
+  .input input {
+    width: 95%; }
+
+/*
+<div class="label-mas-input">
+  <div class="text-label"></div>
+  <div class="input"></div>
+</div>
+*/

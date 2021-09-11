@@ -1,0 +1,18 @@
+@mixin flex($display, $flexDirection, $fwrap, $alignCont, $justifyCont, $alignItem) {
+  display: $display;
+  flex-direction: $flexDirection;
+  flex-wrap: $fwrap;
+  align-content: $alignCont;
+  justify-content: $justifyCont;
+  align-items: $alignItem;
+}
+
+
+
+@mixin grid ($grid, $alignI, $alignC, $justifyC, $justifyI){
+    display: $grid;
+    align-items: $alignI;
+    align-content: $alignC;
+    justify-content: $justifyC;
+    justify-items: $justifyI;
+}

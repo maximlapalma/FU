@@ -1,0 +1,53 @@
+@import "mixin";
+
+/*TEXTO PEQUEÑO Y EN VERTICAL*/
+
+.vertical-text {
+  writing-mode: vertical-lr;
+  transform: rotate(180deg);
+  font-size: 0.6em;
+}
+
+/*LABEL*/
+
+label {
+  font-size: x-small;
+}
+
+select {
+  width: 95%;
+  
+}
+
+/*LABEL MÁS INPUT*/
+
+.label-mas-input {
+  @include grid (grid, center, center, center, stretch);
+  grid-template-columns: 25% 75%;
+  grid-template-rows: 0fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas: "text-label input";
+}
+
+.text-label {
+  grid-area: text-label;
+  label {
+    font-size: x-small;
+    line-height: 0.5em
+  }
+}
+
+.input {
+  grid-area: input;
+  input {
+      width: 95%;
+  }
+}
+
+/*
+<div class="label-mas-input">
+  <div class="text-label"></div>
+  <div class="input"></div>
+</div>
+*/
