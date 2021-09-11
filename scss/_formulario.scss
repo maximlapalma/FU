@@ -5,7 +5,6 @@
 .estructura-general {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 0fr 0fr;
   gap: 0px 0px;
 
   grid-template-areas:
@@ -30,15 +29,12 @@
 .parte-2 {
   grid-area: parte-2;
   @include grid(grid, center, center, center, center);
-  grid-template-columns: 98%;
-  grid-template-rows: 0fr 0fr;
+  grid-template-columns: 1fr;
   gap: 0px 0px;
   grid-auto-flow: row;
   grid-template-areas:
     "establecimiento-1"
     "establecimiento-2";
-  border: solid 1px black;
-  padding:0.5rem;
   /*esto sigue en la PARTE 2*/
 }
 
@@ -378,12 +374,16 @@
 .traslados {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 1fr 1fr;
+  grid-template-rows: 0fr 0fr;
   gap: 0px 0px;
   grid-auto-flow: row;
   grid-template-areas:
     "causa"
     "destino";
+    textarea {
+      width: 95%;
+      padding: 0%;
+    }
 }
 
 .causa {
@@ -434,12 +434,15 @@
   grid-area: datos-establecimiento-1;
   @include grid(grid, center, space-evenly, center, stretch);
   grid-template-columns: 20% 40% 20% 20%;
-  grid-template-rows: 1fr 1fr;
+  /*grid-template-rows: 1fr 1fr;*/
   gap: 0px 0px;
   grid-auto-flow: row;
   grid-template-areas:
     "label-datos nombre-establecimiento-1 cue-establecimiento-1 nivel-establecimiento-1"
     "label-datos input-nombre-establecimiento-1 input-cue-establecimiento-1 input-establecimiento-1";
+  
+    text-align: center;
+  
 }
 
 .label-datos {
@@ -481,7 +484,7 @@
 
 .labels-establecimiento-1 {
   grid-area: labels-establecimiento-1;
-  @include grid(grid, baseline, center, center, center);
+  @include grid(grid, end, center, center, center);
   grid-template-columns: 45% 5% 5% 5% 5% 5% 15% 5% 5% 5%;
   grid-template-rows: 0fr;
   gap: 0px 0px;
@@ -489,7 +492,6 @@
   grid-template-areas: "cargo-nombre-1 turno-1 anio-1 seccion-1 cant-horas-1 sit-revista-1 antiguedad-1 frente-1 dia-1 horario-1";
   p {
     margin: 0rem 1rem 0rem 1rem;
-  
   }
 }
 
@@ -537,7 +539,7 @@
 .fila-carga-datos {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+ /* grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;*/
   gap: 0px 0px;
   grid-auto-flow: row;
   grid-template-areas:
@@ -552,30 +554,44 @@
 
 .fila-1 {
   grid-area: fila-1;
+  @include flex (flex, row, wrap, center, center, center);
+
 }
 
 .fila-2 {
   grid-area: fila-2;
+  @include flex (flex, row, wrap, center, center, center);
+
 }
 
 .fila-3 {
   grid-area: fila-3;
+  @include flex (flex, row, wrap, center, center, center);
+
 }
 
 .fila-4 {
   grid-area: fila-4;
+  @include flex (flex, row, wrap, center, center, center);
+
 }
 
 .fila-5 {
   grid-area: fila-5;
+  @include flex (flex, row, wrap, center, center, center);
+
 }
 
 .fila-6 {
   grid-area: fila-6;
+  @include flex (flex, row, wrap, center, center, center);
+
 }
 
 .fila-7 {
   grid-area: fila-7;
+  @include flex (flex, row, wrap, center, center, center);
+
 }
 
 /*CARGA DE DATOS*/
@@ -592,7 +608,7 @@
 .input-1 {
   grid-area: input-1;
   input {
-    width: 95%;
+    width: 98%;
   }
 }
 
@@ -666,13 +682,17 @@
   grid-area: datos-establecimiento-2;
   @include grid(grid, center, space-evenly, center, stretch);
   grid-template-columns: 20% 40% 20% 20%;
-  grid-template-rows: 1fr 1fr;
+ /* grid-template-rows: 1fr 1fr;*/
   gap: 0px 0px;
   grid-auto-flow: row;
   grid-template-areas:
     "label-datos nombre-establecimiento-2 cue-establecimiento-2 nivel-establecimiento-2"
     "label-datos input-nombre-establecimiento-2 input-cue-establecimiento-2 input-establecimiento-2";
-}
+    
+      text-align: center;
+      margin-bottom: 2px;
+    
+  }
 
 .label-datos {
   grid-area: label-datos;

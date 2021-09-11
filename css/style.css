@@ -7,7 +7,7 @@ body {
   font-size: calc(0.5em + 1vh); }
 
 fieldset {
-  padding: 0.5em;
+  padding: 3px;
   margin: 0%; }
 
 input {
@@ -15,7 +15,20 @@ input {
   margin: 0; }
 
 select {
-  appearance: none; }
+  appearance: none;
+  padding: 0%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+  align-items: center; }
+
+.some-form {
+  display: grid; }
+
+.form-fieldset {
+  display: grid; }
 
 /*TEXTO PEQUEÑO Y EN VERTICAL*/
 .vertical-text {
@@ -64,7 +77,6 @@ select {
 .estructura-general {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 0fr 0fr;
   gap: 0px 0px;
   grid-template-areas: "parte-1" "parte-2";
   justify-content: center;
@@ -88,13 +100,10 @@ select {
   align-content: center;
   justify-content: center;
   justify-items: center;
-  grid-template-columns: 98%;
-  grid-template-rows: 0fr 0fr;
+  grid-template-columns: 1fr;
   gap: 0px 0px;
   grid-auto-flow: row;
   grid-template-areas: "establecimiento-1" "establecimiento-2";
-  border: solid 1px black;
-  padding: 0.5rem;
   /*esto sigue en la PARTE 2*/ }
 
 /*PARTE 1*/
@@ -403,10 +412,13 @@ select {
 .traslados {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 1fr 1fr;
+  grid-template-rows: 0fr 0fr;
   gap: 0px 0px;
   grid-auto-flow: row;
   grid-template-areas: "causa" "destino"; }
+  .traslados textarea {
+    width: 95%;
+    padding: 0%; }
 
 .causa {
   grid-area: causa; }
@@ -447,10 +459,11 @@ select {
   justify-content: center;
   justify-items: stretch;
   grid-template-columns: 20% 40% 20% 20%;
-  grid-template-rows: 1fr 1fr;
+  /*grid-template-rows: 1fr 1fr;*/
   gap: 0px 0px;
   grid-auto-flow: row;
-  grid-template-areas: "label-datos nombre-establecimiento-1 cue-establecimiento-1 nivel-establecimiento-1" "label-datos input-nombre-establecimiento-1 input-cue-establecimiento-1 input-establecimiento-1"; }
+  grid-template-areas: "label-datos nombre-establecimiento-1 cue-establecimiento-1 nivel-establecimiento-1" "label-datos input-nombre-establecimiento-1 input-cue-establecimiento-1 input-establecimiento-1";
+  text-align: center; }
 
 .label-datos {
   grid-area: label-datos; }
@@ -482,7 +495,7 @@ select {
 .labels-establecimiento-1 {
   grid-area: labels-establecimiento-1;
   display: grid;
-  align-items: baseline;
+  align-items: end;
   align-content: center;
   justify-content: center;
   justify-items: center;
@@ -528,31 +541,73 @@ select {
 .fila-carga-datos {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  /* grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;*/
   gap: 0px 0px;
   grid-auto-flow: row;
   grid-template-areas: "fila-1" "fila-2" "fila-3" "fila-4" "fila-5" "fila-6" "fila-7"; }
 
 .fila-1 {
-  grid-area: fila-1; }
+  grid-area: fila-1;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+  align-items: center; }
 
 .fila-2 {
-  grid-area: fila-2; }
+  grid-area: fila-2;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+  align-items: center; }
 
 .fila-3 {
-  grid-area: fila-3; }
+  grid-area: fila-3;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+  align-items: center; }
 
 .fila-4 {
-  grid-area: fila-4; }
+  grid-area: fila-4;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+  align-items: center; }
 
 .fila-5 {
-  grid-area: fila-5; }
+  grid-area: fila-5;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+  align-items: center; }
 
 .fila-6 {
-  grid-area: fila-6; }
+  grid-area: fila-6;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+  align-items: center; }
 
 .fila-7 {
-  grid-area: fila-7; }
+  grid-area: fila-7;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+  align-items: center; }
 
 /*CARGA DE DATOS*/
 .carga-datos-1 {
@@ -567,7 +622,7 @@ select {
 .input-1 {
   grid-area: input-1; }
   .input-1 input {
-    width: 95%; }
+    width: 98%; }
 
 .input-2 {
   grid-area: input-2; }
@@ -625,10 +680,12 @@ select {
   justify-content: center;
   justify-items: stretch;
   grid-template-columns: 20% 40% 20% 20%;
-  grid-template-rows: 1fr 1fr;
+  /* grid-template-rows: 1fr 1fr;*/
   gap: 0px 0px;
   grid-auto-flow: row;
-  grid-template-areas: "label-datos nombre-establecimiento-2 cue-establecimiento-2 nivel-establecimiento-2" "label-datos input-nombre-establecimiento-2 input-cue-establecimiento-2 input-establecimiento-2"; }
+  grid-template-areas: "label-datos nombre-establecimiento-2 cue-establecimiento-2 nivel-establecimiento-2" "label-datos input-nombre-establecimiento-2 input-cue-establecimiento-2 input-establecimiento-2";
+  text-align: center;
+  margin-bottom: 2px; }
 
 .label-datos {
   grid-area: label-datos; }

@@ -23,8 +23,8 @@
                     </form>
 
 
-                    <form>
-                        <fieldset>
+                    <form class="some-form">
+                        <fieldset class="form-fieldset">
                             <legend>Rubro 1: Carátula del trámite</legend>
                             <div class="rubro-1">
                                 <div class="tramite">
@@ -253,8 +253,8 @@
                     </form>
 
 
-                    <form>
-                        <fieldset>
+                    <form class="some-form">
+                        <fieldset class="form-fieldset">
                             <legend>Rubro 4.2: Licencias</legend>
                             <div class="licencias">
                                 <div class="remunerada">
@@ -300,8 +300,8 @@
 
 
 
-                    <form>
-                        <fieldset>
+                    <form class="some-form">
+                        <fieldset class="form-fieldset">
                             <legend>Rubro 4.3: Traslados</legend>
                             <div class="traslados">
                                 <div class="causa">
@@ -310,7 +310,7 @@
                                             <label>CAUSA:</label>
                                         </div>
                                         <div class="input">
-                                            <input type="text">
+                                            <textarea></textarea>
                                         </div>
                                     </div>
                                 </div>
@@ -320,7 +320,7 @@
                                             <label>DESTINO:</label>
                                         </div>
                                         <div class="input">
-                                            <input type="text">
+                                            <textarea></textarea>
                                         </div>
                                     </div>
                                 </div>
@@ -360,14 +360,22 @@
                     <form>
                         <fieldset>
                             <legend>Rubro 4.5: Baja o cese</legend>
-                            <label>MOTIVO:</label>
-                            <select>
-                                <option>B-01: Renuncia</option>
-                                <option>B-02: Facellimiento</option>
-                                <option>B-03: Jubilación</option>
-                                <option>B-04: Presentación del titular</option>
-                                <option>B-05: Cese docente designado s/ límite</option>
-                            </select>
+                            <div class="tramite">
+                                <div class="label-mas-input">
+                                    <div class="text-label">
+                                        <label>MOTIVO:</label>
+                                    </div>
+                                    <div class="input">
+                                        <select>
+                                            <option>B-01: Renuncia</option>
+                                            <option>B-02: Facellimiento</option>
+                                            <option>B-03: Jubilación</option>
+                                            <option>B-04: Presentación del titular</option>
+                                            <option>B-05: Cese docente designado s/ límite</option>
+                                        </select>                                    </div>
+                                </div>
+                            </div>
+                            
                         </fieldset>
                     </form>
                 </div>
@@ -375,7 +383,8 @@
 
             <!-- inicio parte dos del FU -->
             <div class="parte-2">
-
+                <fieldset>
+                    <legend>Rubro 5: Descripción del cargo u horas afectados al trámite</legend>
                 <!-- inicio establecimiento 1 -->
                 <div class="establecimiento-1">
 
@@ -803,7 +812,7 @@
                 <!-- Establecimiento dos -->
                 <div class="establecimiento-2">
                     <div class="datos-establecimiento-2">
-                        <div class="label-datos">
+                           <div class="label-datos">
                             <label>Establecimiento:</label>
                         </div>
                         <div class="cue-establecimiento-2">
@@ -824,6 +833,7 @@
                         <div class="input-establecimiento-2">
                             <input type="text">
                         </div>
+                    
                     </div>
 
                     <div class="fila-carga-datos">
@@ -1188,7 +1198,7 @@
                 </div>
 
                 <!-- FINPARTE 2 y Establecimiento dos -->
-
+            </fieldset>
             </div>
         </div>
 
